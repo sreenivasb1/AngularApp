@@ -1,0 +1,195 @@
+<div class="color" style="background-color:#FFFFFF">
+
+  <div class="auth-container">
+    <div class="animated fadeIn">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 col-xs-12">
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-header" style="background:#135b75;color:#ffffff;">
+                <strong>Registration Form</strong>
+                <!-- <small>Form</small> -->
+              </div>
+              <form #userForm="ngForm" (ngSubmit)="onSubmit()">
+
+                <div class="card-body" style="background-color: #b4b4b4" style="margin-left:4cm">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" class="form-control"  placeholder="Enter Patient name"
+                        name="firstname" [(ngModel)]="patientModel.firstname">
+
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <label for="name">Surname</label>
+                        <input type="text" class="form-control"  placeholder="Enter patient Sirname"
+                        name="surname" [(ngModel)]="patientModel.surname">
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-2">
+                      <label for="Gender">Gender</label>
+                      <select class="form-control" name="gender" [(ngModel)]="patientModel.gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Transgender</option>
+
+                      </select>
+                    </div>
+                  </div>
+                  <!--/.row-->
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <label for="date-of-birth">Date Of Birth</label>
+                        <input type="text" class="form-control"  placeholder=""
+                        name="DOB" [(ngModel)]="patientModel.DOB">
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-3">
+                      <label for="Maritial">Marital Status</label>
+                      <select class="form-control"  name="maritial" [(ngModel)]="patientModel.maritial">
+                        <option>Single</option>
+                        <option>Married</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!--/.row-->
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <label for="name">Email-Id</label>
+                        <input type="text" class="form-control"  placeholder="abc@gmail.com"
+                        name="email" [(ngModel)]="patientModel.email">
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <label for="mobile number">Mobile Number</label>
+                        <input type="text" class="form-control"
+                        name="mobile" [(ngModel)]="patientModel.mobile">
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <label for="Phone">Phone(Home)</label>
+                        <input type="text" class="form-control"
+                        name="phone" [(ngModel)]="patientModel.phone">
+                      </div>
+                    </div>
+                  </div>
+                  <!--/.row-->
+
+                  <div class="row">
+
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <label for="Street or Colony">Street or Colony</label>
+                        <input type="text" class="form-control"
+                        name="street" [(ngModel)]="patientModel.street">
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label for="House/Apartment Name/ Society">House/Apartment Name/Society</label>
+                        <input type="text" class="form-control"  placeholder="Enter the house number"
+                        name="society" [(ngModel)]="patientModel.society">
+                      </div>
+                    </div>
+                  </div>
+                  <!--/.row-->
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <label for="City">City</label>
+                        <input type="text" class="form-control" placeholder=""
+                        name="city" [(ngModel)]="patientModel.city">
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <label for="State">State</label>
+                        <input type="text" class="form-control"
+                        name="state" [(ngModel)]="patientModel.state">
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <label for="Pin Code">Pin Code</label>
+                        <input type="text" class="form-control"
+                        name="pin" [(ngModel)]="patientModel.pin">
+                      </div>
+                    </div>
+                  </div>
+                  <!--/.row-->
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <label for="Nationality">Nationality</label>
+                        <input type="text" class="form-control"  placeholder=""
+                        name="nationality" [(ngModel)]="patientModel.nationality">
+                      </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <label for="ID card">ID card</label>
+                        <select class="form-control"  name="ID" [(ngModel)]="patientModel.ID">
+                          <option>Aadhaar Number</option>
+                          <option>Voter ID</option>
+                          <option>Pan Card</option>
+                          <option>Passport</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/.row-->
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <label for="Type of Patient">Type of Patient</label>
+                        <select class="form-control" name="typeofPatient" [(ngModel)]="patientModel.typeofpatient">
+                          <option>Emergency</option>
+                          <option>Regular Test</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="Note for Patient">Note for Patient</label>
+                        <input type="text" class="form-control"
+                          placeholder=" Add some infections, alergies that patient has"
+                          name="noteforPatient" [(ngModel)]="patientModel.note">
+                      </div>
+                    </div>
+                  </div>
+                  <!--/.row-->
+                  <br>
+                  <br>
+                  <div class="row">
+                    <br>
+                    <div class style="margin-left: 2cm">
+                      <button type="submit" class="btn btn-primary">Register Patient
+                      </button>
+
+                    </div>
+                    <div class="col-sm-1">
+                      <div class style="margin-left: 3cm">
+                        <div class style="width: 150px; height: 100px">
+                          <button type="button" class="btn btn-primary"> Cancel
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
